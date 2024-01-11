@@ -40,7 +40,7 @@ void print_fp32_bits(const float x) {
     std::cout << std::endl;
 }
 
-void print_f32_hex(const float x) {
+void print_fp32_hex(const float x) {
     unsigned int x_int = as_uint(x);
     printf("0x%04x\n", x_int);
 }
@@ -66,6 +66,11 @@ ushort float_to_half(const float x) { // IEEE-754 16-bit floating-point format (
 ushort float_to_bhalf(const float x) {
     ushort data = ((unsigned int *)(&x))[0] >> 16;
     return data;
+}
+
+float bhalf_to_float(const ushort x) {
+    unsigned int proc = x << 16;
+    return as_float(proc);
 }
 
 enum FLOAT_TYPE {

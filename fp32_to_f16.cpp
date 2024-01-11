@@ -4,7 +4,7 @@
 
 int main(int argc, const char *argv[]) {
     if (argc != 2) {
-        std::cout << "Format Error! fpconvert <float>" << std::endl;
+        std::cout << "Format Error! fp32_to_16 <float>" << std::endl;
         return -1;
     }
     std::cout << "f32 : " << get_float_format(kFloat32) << std::endl;
@@ -15,7 +15,7 @@ int main(int argc, const char *argv[]) {
     std::cout << "input : " << x << std::endl;
 
     std::cout << "------------------fp32------------------------" << std::endl;
-    print_f32_hex(x);
+    print_fp32_hex(x);
     print_fp32_bits(x);
     std::cout << "----------------------------------------------" << std::endl;
 
