@@ -3,6 +3,10 @@
 #include "fpconvert.hpp"
 
 int main(int argc, const char *argv[]) {
+    if (argc != 2) {
+        std::cout << "Format Error! fpconvert <float>" << std::endl;
+        return -1;
+    }
     std::cout << "f32 : " << get_float_format(kFloat32) << std::endl;
     std::cout << "f16 : " << get_float_format(kFloat16) << std::endl;
     std::cout << "bf16 : " << get_float_format(kBFloat16) << std::endl;
