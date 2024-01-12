@@ -14,3 +14,8 @@ target("bf16_to_fp32")
     set_kind("binary")
     add_includedirs("src")
     add_files("bf16_to_fp32.cpp")
+
+target("hex_to_fp32")
+    set_kind("binary")
+    add_includedirs("src")
+    add_files("hex_to_fp32.cpp")
